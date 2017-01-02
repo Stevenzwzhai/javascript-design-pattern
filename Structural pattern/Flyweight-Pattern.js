@@ -48,6 +48,7 @@ function Company(data){
 }
 //使用工厂模式保证不去重复创建这些公共信息
 var PersonFactory = (function(){
+    //people将通过闭包一直存在于内存中
     var people = {},
         personCount = 0;
     return {
@@ -123,4 +124,9 @@ employee = (function(){
         }
     }
 })()
+
+/*
+* 对于一个对象实例中，其数据核被称作该类的内部状态数据，而那些可以提取出来单独存储的、并且能从原对象对此独立存储的数据进行应用的数据成为
+* 外部状态数据，内部状态数据具有唯一性。
+* */
 
