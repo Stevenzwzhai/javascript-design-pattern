@@ -29,3 +29,4 @@ function extendObj(obj1, obj2){
     }
     return obj1;
 }
+//定义一个单例，将log方法应用于其上
