@@ -25,6 +25,7 @@ function extendObj(obj1, obj2){
     for(obj2Key in obj2){
         if(obj2.hasOwnProperty(obj2Key)){
             //在这里要注意一点。如果是引用类型，如对象，数组，那么必须深拷贝。
+            //一个检测数组的方法Object.prototype.toString.apply(value)==="[object Array]"
             obj1[obj2Key] = obj2[obj2Key];
         }
     }
